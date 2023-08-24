@@ -9,7 +9,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      cursorColor: KPrimarycolor,
+      cursorColor: kPrimarycolor,
       maxLines: maxLines,
       // obscureText: obscureText!,
 
@@ -17,11 +17,11 @@ class CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: const TextStyle(
-          color: KPrimarycolor,
+          color: kPrimarycolor,
         ),
         enabledBorder: buildborder(),
         border: buildborder(),
-        focusedBorder: buildborder(KPrimarycolor),
+        focusedBorder: buildborder(kPrimarycolor),
       ),
     );
   }
