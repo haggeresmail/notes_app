@@ -6,7 +6,7 @@ import 'package:noteapp/widgets/addnote_form.dart';
 
 
 class AddNoteBottomSheet extends StatelessWidget {
-   AddNoteBottomSheet({
+    const AddNoteBottomSheet({
     super.key,
   });
 
@@ -27,7 +27,7 @@ class AddNoteBottomSheet extends StatelessWidget {
           builder: (context, state) {
             return ModalProgressHUD(
               inAsyncCall: state is AddNoteLoading ? true : false,
-            child: AddNoteForm());
+            child:  AddNoteForm());
           },
         ),
       ),
