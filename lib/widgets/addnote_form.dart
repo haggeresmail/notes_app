@@ -14,8 +14,6 @@ class AddNoteForm extends StatefulWidget {
   @override
   State<AddNoteForm> createState() => _AddNoteFormState();
 }
-DateTime now = DateTime.now();
-String formattedDate = DateFormat().add_yMd().format(now);
 
 class _AddNoteFormState extends State<AddNoteForm> {
   final GlobalKey<FormState> formKey = GlobalKey();
@@ -53,11 +51,13 @@ class _AddNoteFormState extends State<AddNoteForm> {
           BlocBuilder<AddNoteCubit, AddNoteState>(
             builder: (context, state) {
               return CustomButton(
-                isloading:state is AddNoteLoading ? true:false,
+                isloading: state is AddNoteLoading ? true : false,
                 text: 'Add',
                 onTap: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
+                    DateTime now = DateTime.now();
+                    String formattedDate = DateFormat().add_yMd().format(now);
                     var notemodel = NoteModel(
                         title: title!,
                         subtitle: subtitle!,
@@ -69,7 +69,6 @@ class _AddNoteFormState extends State<AddNoteForm> {
                     setState(() {});
                   }
                 },
-            
               );
             },
           ),
