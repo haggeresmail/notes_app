@@ -8,17 +8,17 @@ import 'package:noteapp/views/editnoteview.dart';
 class NoteItem extends StatelessWidget {
   const NoteItem({super.key, required this.note});
 
-  final List<Color> colors = const [
-    Colors.red,
-    Colors.orange,
-    Colors.blue,
-    Colors.green,
-    Colors.pink,
-    Colors.red,
-    Colors.orange,
-    Colors.blue,
-    Colors.green,
-  ];
+  // final List<Color> colors = const [
+  //   Colors.red,
+  //   Colors.orange,
+  //   Colors.blue,
+  //   Colors.green,
+  //   Colors.pink,
+  //   Colors.red,
+  //   Colors.orange,
+  //   Colors.blue,
+  //   Colors.green,
+  // ];
   static int i = 0;
   final NoteModel note;
   @override
